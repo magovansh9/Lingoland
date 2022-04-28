@@ -14,5 +14,3 @@ export default (posts = [], action) => {
       return posts;
   }
 };
-
-// "posts" symbolizes local state
