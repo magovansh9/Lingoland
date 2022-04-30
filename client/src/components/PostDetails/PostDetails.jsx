@@ -32,7 +32,7 @@ const PostDetails = () => {
     }
   }, [post]);
 
-  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+  const recommendedPosts = posts.filter(({ _id }) => _id !== id);
 
   const openPost = (_id) => history(`/posts/${_id}`);
 
@@ -101,16 +101,16 @@ const PostDetails = () => {
                   onClick={() => openPost(_id)}
                   key={_id}
                 >
-                  <Typography guttenBottom variant='h6'>
+                  <Typography gutterBottom variant='h6'>
                     {title}
                   </Typography>
-                  <Typography guttenBottom variant='subtitle2'>
+                  <Typography gutterBottom variant='subtitle2'>
                     {name}
                   </Typography>
-                  <Typography guttenBottom variant='subtitle2'>
+                  <Typography gutterBottom variant='subtitle2'>
                     {message}
                   </Typography>
-                  <Typography guttenBottom variant='subtitle1'>
+                  <Typography gutterBottom variant='subtitle1'>
                     Likes: {likes.length}
                   </Typography>
                   <img src={selectedFile} width='200px' />

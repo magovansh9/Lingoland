@@ -30,7 +30,7 @@ const CommentSection = ({ post }) => {
             Comments
           </Typography>
           {comments.map((comment, i) => (
-            <Typography key={i} guttenBottom variant='subtitle1'>
+            <Typography key={i} gutterBottom variant='subtitle1'>
               <strong>{comment.split(": ")[0]}</strong>
               {comment.split(":")[1]}
             </Typography>
