@@ -13,8 +13,6 @@ import Auth from "./components/Auth/Auth";
 import PostDetails from "./components/PostDetails/PostDetails";
 
 const App = () => {
-  const user = JSON.parse(localStorage.getItem("profile"));
-
   return (
     <Container maxwidth='xl'>
       <Router>

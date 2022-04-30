@@ -16,6 +16,7 @@ const postSchema = mongoose.Schema({
     type: Date,
     default: new Date(),
   },
+  contact: String,
 });
 
 const PostMessage = mongoose.model("PostMessage", postSchema);

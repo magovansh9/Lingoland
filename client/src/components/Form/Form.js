@@ -14,6 +14,7 @@ const Form = ({ currentId, setCurrentId }) => {
     message: "",
     tags: "",
     selectedFile: "",
+    contact: "",
   });
   const post = useSelector((state) =>
     currentId ? state.posts.posts.find((p) => p._id === currentId) : null
@@ -58,6 +59,7 @@ const Form = ({ currentId, setCurrentId }) => {
       message: "",
       tags: "",
       selectedFile: "",
+      contact: "",
     });
   };
 
@@ -110,6 +112,16 @@ const Form = ({ currentId, setCurrentId }) => {
           value={postData.tags}
           onChange={(e) =>
             setPostData({ ...postData, tags: e.target.value.split(",") })
+          }
+        />
+        <TextField
+          name='contact'
+          variant='outlined'
+          label='Contact'
+          fullWidth
+          value={postData.contact}
+          onChange={(e) =>
+            setPostData({ ...postData, contact: e.target.value })
           }
         />
         <div className={classes.fileInput}>
