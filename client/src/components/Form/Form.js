@@ -30,10 +30,18 @@ const Form = ({ currentId, setCurrentId }) => {
 
     if (currentId) {
       dispatch(
-        updatePost(currentId, { ...postData, name: user?.result?.name })
+        updatePost(currentId, {
+          ...postData,
+          name: user?.result?.name,
+        })
       );
     } else {
-      dispatch(createPost({ ...postData, name: user?.result?.name }));
+      dispatch(
+        createPost({
+          ...postData,
+          name: user?.result?.name,
+        })
+      );
     }
     clear();
   };
@@ -41,7 +49,6 @@ const Form = ({ currentId, setCurrentId }) => {
   const clear = () => {
     setCurrentId(null);
     setPostData({
-      creator: "",
       title: "",
       message: "",
       tags: "",
@@ -71,16 +78,6 @@ const Form = ({ currentId, setCurrentId }) => {
           {currentId ? "Editing" : "Create"} a Post
         </Typography>
         <TextField
-          name='creator'
-          variant='outlined'
-          label='Creator'
-          fullWidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({ ...postData, creator: e.target.value })
-          }
-        />
-        <TextField
           name='title'
           variant='outlined'
           label='Title'
@@ -93,6 +90,8 @@ const Form = ({ currentId, setCurrentId }) => {
           variant='outlined'
           label='Message'
           fullWidth
+          multiline
+          rows={4}
           value={postData.message}
           onChange={(e) =>
             setPostData({ ...postData, message: e.target.value })

@@ -63,7 +63,6 @@ const Auth = () => {
   const googleSuccess = async (res) => {
     const result = res?.profileObj; // ? prevents errors in case the res object does not exist
     const token = res?.tokenId;
-    console.log(res);
 
     try {
       dispatch({ type: "AUTH", data: { result, token } });
