@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import useStyles from "./styles.js";
 import { createPost, updatePost } from "../../actions/posts";
@@ -15,11 +16,12 @@ const Form = ({ currentId, setCurrentId }) => {
     selectedFile: "",
   });
   const post = useSelector((state) =>
-    currentId ? state.posts.find((p) => p._id === currentId) : null
+    currentId ? state.posts.posts.find((p) => p._id === currentId) : null
   ); // use Selector to return and display the data returned by redux state
   const classes = useStyles();
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
+  const history = useNavigate();
 
   useEffect(() => {
     if (post) setPostData(post);
@@ -37,10 +39,13 @@ const Form = ({ currentId, setCurrentId }) => {
       );
     } else {
       dispatch(
-        createPost({
-          ...postData,
-          name: user?.result?.name,
-        })
+        createPost(
+          {
+            ...postData,
+            name: user?.result?.name,
+          },
+          history
+        )
       );
     }
     clear();
@@ -67,7 +72,7 @@ const Form = ({ currentId, setCurrentId }) => {
   }
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} elevation={6}>
       <form
         autoComplete='off'
         noValidate
