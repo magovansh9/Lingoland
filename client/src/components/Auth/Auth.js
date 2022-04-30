@@ -6,7 +6,6 @@ import {
   Grid,
   Typography,
   Container,
-  TextField,
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { GoogleLogin } from "react-google-login";
@@ -16,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import useStyles from "./styles";
 import Input from "./Input";
 import Icon from "./icon";
+import { signin, signup } from "../../actions/auth";
 
 const initialState = {
   firstName: "",
@@ -42,10 +42,12 @@ const Auth = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(formData);
+
     if (isSignup) {
-      //   dispatch(signup(formData, history));
+      dispatch(signup(formData, history));
     } else {
-      //   dispatch(signin(formData, history));
+      dispatch(signin(formData, history));
     }
   };
 
