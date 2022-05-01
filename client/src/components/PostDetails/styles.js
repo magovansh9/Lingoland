@@ -1,6 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+  paper: {
+    marginLeft: "20px",
+    marginRight: "25px",
+    marginBottom: "20px",
+    width: "96%",
+  },
   media: {
     borderRadius: "20px",
     objectFit: "cover",

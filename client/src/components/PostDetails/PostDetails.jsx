@@ -47,7 +47,11 @@ const PostDetails = () => {
   }
 
   return (
-    <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
+    <Paper
+      style={{ padding: "20px", borderRadius: "15px" }}
+      elevation={6}
+      className={classes.paper}
+    >
       <div className={classes.card}>
         <div className={classes.section}>
           <Typography variant='h3' component='h2'>
