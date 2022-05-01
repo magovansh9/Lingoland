@@ -64,15 +64,13 @@ const PostDetails = () => {
           <Typography gutterBottom variant='body1' component='p'>
             {post.message}
           </Typography>
-          <Typography variant='h5'>
-            <strong>Created by:</strong> {post.name}
-          </Typography>
+          <Typography variant='h5'>Created by: {post.name}</Typography>
           <Typography variant='body1'>
             {moment(post.createdAt).fromNow()}
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
-          <Typography variant='h6'>
-            <strong>Let's chat! </strong>
+          <Typography variant='h5' gutterBottom>
+            Let's chat!
           </Typography>
           <Typography variant='subtitle1'>{post.contact}</Typography>
           <Divider style={{ margin: "20px 0" }} />
@@ -87,6 +85,7 @@ const PostDetails = () => {
               "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
             }
             alt={post.title}
+            width='200px'
           />
         </div>
       </div>
