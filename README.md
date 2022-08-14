@@ -27,7 +27,7 @@ React is a free and open-source front-end JavaScript library for building user i
 
 Node JS is a fast JavaScript runtime environment that we use to build server-side applications, but it does not know how to perform serving files, handling requests, and handling HTTP methods, so this is where express js comes in.
 
-Try out Lingoland [here](https://lingoland.netlify.app/posts)
+Try out Lingoland [here](https://lingoland.netlify.app/posts)!
 
 
 
