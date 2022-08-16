@@ -21,7 +21,7 @@ MongoDB is a source-available cross-platform document-oriented database program.
 
 ### Frontend - React
 
-React is a free and open-source front-end JavaScript library for building user interfaces based on UI components.
+React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. We also make use of the best authentication practices by using the React Google OAuth 2.0 Authentication Protocol.
 
 ### Backend - Node JS and Express
 
