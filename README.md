@@ -1,6 +1,6 @@
 # Lingoland
 
-Lingoland is a collaborative MERN application for language learning communities
+Lingoland is a collaborative MERN application for language learning communities.
 
 ## Motivation
 
