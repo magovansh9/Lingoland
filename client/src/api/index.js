@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://lingolands.herokuapp.com" });
+const API = axios.create({ baseURL: "https://lingolandserver.cyclic.app" });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
